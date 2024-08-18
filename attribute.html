@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+ <style>
+  .pink-mode{
+   background-color: blueviolet;
+   color: rgb(10, 133, 255);
+  }
+ </style>
+
+ <input type="text" id="meuInput" placeholder="Digite seu nome">
+ <div id="myDiv" class="ola-classe"><h1>Div aqui</h1></div>
+ <button onclick="mudarTema()">Mudar tema</button>
+
+ <script>
+  function mudarTema(){
+    let myDiv = document.getElementById("myDiv")
+    myDiv.classList.toggle('pink-mode') //adiciona ou remove a propriedade
+  }
+
+ </script>  
+</body>
+</html>

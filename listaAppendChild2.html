@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+ <h1>AppendChild</h1>
+ <ul id="ul-list"></ul>
+
+<script>
+ //lista com appendChild
+ const list = document.getElementById('ul-list');
+ const items = ['Item 1', 'Item 2', 'Item 3']; //array de itens
+ items.forEach(item => { //pega cada item e faz o processo abaixo
+     const li = document.createElement('li');  //cria elemento li
+     li.innerHTML = `
+                   <span>Item: ${item}</span>
+                   <img src="">
+     `
+     list.appendChild(li)
+ })
+
+</script>  
+
+</body> 
+</html>
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Manipulação de Atributos</title>
+<style>
+
+ .texto {
+  color:darkblue;
+ }
+
+ .pink-mode {
+  background-color: darkorchid;
+ }
+</style>
+</head>
+
+<body>
+ <p id="paragrafo" class="texto">Presta atenção aqui</p>
+
+ <button onclick="troca()">Alterar Cor do texto</button>
+
+ <button onclick="add()">Adicionar/Remover classe</button>
+
+ <button onclick="modificar()">Adicionar/remover atributo</button>
+
+ <br>
+ <input type="text" placeholder="Preencha esse campo" id="preencha">
+
+
+ <script>
+ function troca(){
+  //style.color = "red"
+  const paragrafo = document.getElementById("paragrafo")
+  paragrafo.style.color = "cadetblue"; 
+ }
+
+ function add(){
+  //classList.add('pink-mode')
+  const paragrafo = document.getElementById("paragrafo")
+  paragrafo.classList.toggle("pink-mode")
+ }
+
+ function modificar(){
+  //setAttribute()
+  const preencher = document.getElementById('preencha')
+  setAttribute('placeholder', 'olá olá olá')
+ }
+ </script>
+</body>
+</html>

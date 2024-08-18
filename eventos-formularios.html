@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+ <!-- onsubmit="submitForm($event)" função do evento submit do formulario -->
+ <!-- <form id="myForm"> -->
+ <form id="myForm">
+  <input type="text" id="username" placeholder="Username">
+  <button type="submit">Submit</button> <!--type reset - apaga o q ta escrito no form -->
+</form>
+<script>
+ let myForm = document.getElementById('myForm');
+ myForm.addEventListener('submit', (event) => {
+   event.preventDefault(); // Previne o envio padrão do formulário -> evita perder dados
+   console.log("submit do form")
+   console.log(event)
+ });
+</script>
+</body>
+
+
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>InsertBefore</title>
+ <style>
+ .lista {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+ }
+ 
+ .q {
+  width: 80px;
+  height: 80px;
+ }
+
+ .red {
+  background-color: red;
+ }
+
+ .blue {
+  background-color: aqua;
+ } 
+
+ .orange {
+  background-color: orange;
+ }
+
+ .brown {
+  background-color: brown;
+ }
+ </style>
+ </head>
+<body>
+ <h1>InsertBefore</h1>
+
+ <div id="lista" class="lista">
+  <div id="q1" class="q red"></div> 
+  <div id="q2" class="q blue"></div> 
+  <div id="q3" class="q orange"></div>
+ </div>
+
+ <script>
+  const lista = document.getElementById('lista') //captura id lista
+  const novoQuadrado = document.createElement('div')
+  novoQuadrado.className = 'q brown'
+
+  const referencia = document.getElementById('q3') //pega referencia
+  lista.insertBefore(novoQuadrado, referencia)
+  // lista.appendChild(novoQuadrado)
+ </script>
+</body>
+</html>

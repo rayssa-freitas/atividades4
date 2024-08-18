@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script src="script.js" defer></script> <!--para carregar primeiro html, dps js-->
+</head>
+<body>
+
+ <style>
+  p{
+   background-color: beige;
+  }
+
+  p:nth-child(even) { /*estilização em elementos pares*/
+   background-color: rgb(184, 246, 246);
+  }
+ </style>
+<div class="container">
+ <p>item</p>
+ <p>item</p>
+ <p>item</p>
+ <p>item</p>
+ <p>item</p>
+ <p>item</p>
+ <p>item</p>
+ <p>item</p>
+</div>
+ 
+ <script>
+  let elemento = document.querySelector('.container p:nth-child()');
+  console.log(elemento)
+ </script>
+</body>
+</html>

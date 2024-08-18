@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+ <style>
+  #modificando {
+   color:brown;
+
+  }
+
+  .cor {
+   background:coral;
+  }
+
+  .alterar {
+   text-decoration:darkslateblue;
+  }
+
+  .tamanho {
+   font-size: 30px;
+  }
+
+ </style>
+ <p id="modificando" class="cor tamanho">Este parágrafo será alterado</p>
+ <button onclick="alterarCor">Mudar cor do texto</button>
+ <button onclick="alterarClasse()">Adicionar/remover classe</button>
+ <button onclick="alterarAtributo()">Adicionar/remover atributo</button>
+ 
+ <script>
+ 
+  function alterarCor() {
+  const cor = document.getElementById("modificando")
+  cor.style.color = "burlywood"
+  } 
+ 
+  function alterarClasse() {
+   const classe = document.getElementById("modificando")
+   classe.classList.toggle("alterar")
+  }
+
+  function alterarAtributo(){
+   const atributos = document.getElementById("modificando")
+   atributos.setAttribute('aria-label', 'olá')
+  }
+
+ </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+ <h1>AppendChild</h1>
+ <ul id="ul-list"></ul>
+
+<script>
+ //lista com appendChild
+ const list = document.getElementById('ul-list');
+ const items = ['Item 1', 'Item 2', 'Item 3']; //array de itens
+ for(let i = 0; i < items.length; i++) { //pega cada item e faz o processo abaixo
+     const listItem = document.createElement('li');  //cria elemento li
+     listItem.textContent = items[i]; //define texto do li como item atual -> "Item 1"
+     //pega item atual [i] e atribui ao textContext do elemento <li>
+     list.appendChild(listItem); //adiciona li a lista
+ }
+
+</script>  
+
+</body> 
+</html>
+

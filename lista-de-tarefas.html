@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Lista de Tarefas</title>
+</head>
+<body>
+ <h1>Lista de Tarefas</h1>
+ <input id = "inserirTarefa" type="text" placeholder="Nova Tarefa">
+ <button onclick="adcTarefa()">Adicionar nova tarefa</button>
+ <ul id="novaTarefa">
+ </ul>
+ <script>
+  function adcTarefa() {
+  const tarefaInput = document.getElementById("inserirTarefa")
+  const tarefa = tarefaInput.value //pega variavel do input, e adiciona a nova variavel
+              
+  // . trim() remove espaços em brancos
+  if (tarefa.trim()) {  //tratando variavel -> verifica se é VERDADEIRA  
+   const adicionaTarefa = document.getElementById("novaTarefa") //se for V -> add na UL
+   adicionaTarefa.innerHTML += `<li>${tarefa}</li>` //pega UL para adicionar elemento LI
+   tarefaInput.value = ' ' //limpa caixa input 
+  }
+ }
+ </script>
+
+</body>
+</html> 
+
